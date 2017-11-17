@@ -1,9 +1,656 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Paradigm</title>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Light Bootstrap Dashboard by Creative Tim</title>
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+      <meta name="viewport" content="width=device-width">
+      <!-- Bootstrap core CSS     -->
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Animation library for notifications   -->
+      <link href="assets/css/animate.min.css" rel="stylesheet">
+      <!--  Light Bootstrap Table core CSS    -->
+      <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet">
+      <!--  CSS for Demo Purpose, don't include it in your project     -->
+      <link href="assets/css/demo.css" rel="stylesheet">
+      <!--     Fonts and icons     -->
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+      <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet">
+      <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13/stats.js"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
+            <!--
+               Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+               Tip 2: you can also add an image using data-image tag
 
-</body>
+               -->
+            <div class="sidebar-wrapper">
+               <div class="logo">
+                  <a href="http://www.creative-tim.com" class="simple-text">&nbsp;Paradigm Hyperloop&nbsp;</a>
+               </div>
+               <ul class="nav nav-mobile-menu">
+                  <ul class="nav navbar-nav navbar-left">
+                     <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fa fa-dashboard"></i>
+                           <p class="hidden-lg hidden-md">Dashboard</p>
+                        </a>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fa fa-globe"></i>
+                           <b class="caret hidden-lg hidden-md"></b>
+                           <p class="hidden-lg hidden-md">
+                              5 Notifications
+                              <b class="caret"></b>
+                           </p>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a href="#">Notification 1</a></li>
+                           <li><a href="#">Notification 2</a></li>
+                           <li><a href="#">Notification 3</a></li>
+                           <li><a href="#">Notification 4</a></li>
+                           <li><a href="#">Another notification</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="">
+                           <i class="fa fa-search"></i>
+                           <p class="hidden-lg hidden-md">Search</p>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li>
+                        <a href="">
+                           <p>Account</p>
+                        </a>
+                     </li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <p>
+                              Dropdown
+                              <b class="caret"></b>
+                           </p>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a href="#">Action</a></li>
+                           <li><a href="#">Another action</a></li>
+                           <li><a href="#">Something</a></li>
+                           <li><a href="#">Another action</a></li>
+                           <li><a href="#">Something</a></li>
+                           <li class="divider"></li>
+                           <li><a href="#">Separated link</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <p>Log out</p>
+                        </a>
+                     </li>
+                     <li class="separator hidden-lg"></li>
+                  </ul>
+               </ul>
+               <ul class="nav">
+                  <li class="active">
+                     <a href="index.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Vehicle Dashboard</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>Flight Profile</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="table.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Sensor Overrides</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="typography.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Manual Control</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="icons.html">
+                        <i class="pe-7s-science"></i>
+                        <p>Live Streams</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="maps.html">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Service Health</p>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="notifications.html">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notifications</p>
+                     </a>
+                  </li>
+                  <li class="active-pro" style="
+                     /* background-color: red */">
+                     <a href="upgrade.html" style="
+                        background-color: rgba(255, 0, 0, 0.72);">
+                        <i class="pe-7s-rocket"></i>
+                        <p>Launch Sequence</p>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="sidebar-background" style="background-image: url(assets/img/sidebar-5.jpg) "></div>
+         </div>
+         <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand" href="#">Pod CGP-001</a>
+                  </div>
+                  <div class="collapse navbar-collapse">
+                     <ul class="nav navbar-nav navbar-left">
+                        <li>
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <i class="fa fa-dashboard text-warning"></i>
+                              <p class="hidden-lg hidden-md">Dashboard</p>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              <i class="fa fa-wifi text-success"></i>
+                              <p class="hidden-lg hidden-md">Search</p>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="" style="
+                              padding:4px;">
+                           <span class="btn btn-danger btn-xs text-danger" style="
+                              padding: 4px;
+                              margin:0">Emergency</span>
+                           </a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <i class="fa fa-refresh" style=""></i>&nbsp; &nbsp;1 second ago<b class="caret hidden-lg hidden-md"></b>
+                              <p class="hidden-lg hidden-md">
+                                 5 Notifications
+                                 <b class="caret"></b>
+                              </p>
+                           </a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#">Notification 1</a></li>
+                              <li><a href="#">Notification 2</a></li>
+                              <li><a href="#">Notification 3</a></li>
+                              <li><a href="#">Notification 4</a></li>
+                              <li><a href="#">Another notification</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                              <p></p>
+                           </a>
+                        </li>
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                              <p>
+                                 Commands&nbsp;<b class="caret"></b>
+                              </p>
+                           </a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#">Fill</a></li>
+                              <li><a href="#">Standby</a></li>
+                              <li><a href="#">Reboot</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#" class="text-warning">Arm</a></li>
+                              <li><a href="#" class="text-danger">Fire</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="" class="btn btn-danger btn-xs text-danger" style="
+                              padding: 4px;">
+                           Emergency Stop
+                           </a>
+                        </li>
+                        <li class="separator hidden-lg"></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <div class="content">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="alert alert-danger">
+                           <button type="button" aria-hidden="true" class="close">×</button>
+													 <span><b><i class="fa fa-exclamation"></i> Emergency Vehicle Notification - Cease Filling Immediately. Fill Valve State: <code>Error</code></b> </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Air Supply</h4>
+                              <p class="category">Piping &amp; Instrumentation</p>
+                           </div>
+                           <div class="content">
+                              <div class="text-center">
+                                 <img src="./assets/img/cw3-pdb-pid.png" width="80%">
+                              </div>
+                              <div class="footer">
+                                 <div class="legend"><i class="fa fa-circle text-success"></i>&nbsp;Valve Closed&nbsp;<i class="fa fa-circle text-info"></i>&nbsp;Valve Open
+                                    <i class="fa fa-circle text-warning"></i>&nbsp;Transition&nbsp;<i class="fa fa-circle text-danger"></i>&nbsp;Error&nbsp;
+                                 </div>
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-check text-success"></i>&nbsp; Air Supply Ok
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Fill Controls</h4>
+                              <p class="category">Primary Tank</p>
+                           </div>
+                           <div class="content">
+                              <hr>
+                              <div class="text-warning">
+                                 <h2>1560 <small>PSI</small>&nbsp;</h2>
+                              </div>
+                              <hr>
+                              <h2>+5&nbsp;<small>PSI/s</small>&nbsp;</h2>
+                              <hr>
+                              <h2>15° &nbsp;<small>C</small>&nbsp;</h2>
+                              <div class="footer">
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-times text-danger"></i>&nbsp; Primary Tank Fault
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Environment</h4>
+                              <p class="category">Pressure, Humidity, Temp</p>
+                           </div>
+                           <div class="content">
+                              <hr>
+                              <div class="">
+                                 <h2>500 <small>Torr</small>&nbsp;</h2>
+                              </div>
+                              <hr>
+                              <h2>20%&nbsp;<small>RH</small>&nbsp;</h2>
+                              <hr>
+                              <h2>25° &nbsp;<small>C</small>&nbsp;</h2>
+                              <div class="footer">
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-check text-success"></i>&nbsp; Environment Ok
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="card">
+                           <div class="header">
+                              <h4 class="title">Navigation</h4>
+                              <p class="category">Position, Velocity, Acceleration</p>
+                           </div>
+                           <div class="content">
+                              <div id="chartHours" style="" class="ct-chart"></div>
+                              <div class="footer">
+                                 <div class="legend">
+                                    <i class="fa fa-circle text-info"></i> Position&nbsp;<i class="fa fa-circle text-danger"></i> Velocity&nbsp;<i class="fa fa-circle text-warning"></i> Acceleration&nbsp;
+                                 </div>
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-check text-success"></i>&nbsp; Navigation Ok
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="card ">
+                           <div class="header">
+                              <h4 class="title">Flight Profile</h4>
+                              <p class="category">Competition Flight &nbsp;• &nbsp;Loaded From Disk</p>
+                           </div>
+                           <div class="content">
+                              <table class="table table-hover table-striped">
+                                 <thead>
+                                    <tr>
+                                       <th>Ok</th>
+                                       <th>Name</th>
+                                       <th>Value</th>
+                                       <th>Units</th>
+                                       <th>Description</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>System Pressure</td>
+                                       <td>1500</td>
+                                       <td>PSI</td>
+                                       <td>Primary Tank Pressure (1 ATM Relative)</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Track Length</td>
+                                       <td>1250</td>
+                                       <td>Meters</td>
+                                       <td>Total Track Length</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-danger"></i></td>
+                                       <td>Launch Position</td>
+                                       <td>-4</td>
+                                       <td>Meters</td>
+                                       <td>Position of vehicle at launch</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set A - Enable</td>
+                                       <td>True</td>
+                                       <td>Boolean</td>
+                                       <td>Enable Braking with brake set A</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set A - Max PSI</td>
+                                       <td>500</td>
+                                       <td>PSI</td>
+                                       <td>Maximium Allowable Pressure in Brake set A</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set B - Enable</td>
+                                       <td>True</td>
+                                       <td>Boolean</td>
+                                       <td>Enable Braking with brake set B</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set B - Max PSI</td>
+                                       <td>500</td>
+                                       <td>PSI</td>
+                                       <td>Maximium Allowable Pressure in Brake set B</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set C - Enable</td>
+                                       <td>True</td>
+                                       <td>Boolean</td>
+                                       <td>Enable Braking with brake set C</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Brake Set C - Max PSI</td>
+                                       <td>500</td>
+                                       <td>PSI</td>
+                                       <td>Maximium Allowable Pressure in Brake set C</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-success"></i></td>
+                                       <td>Target Velocity</td>
+                                       <td>282</td>
+                                       <td>m/s</td>
+                                       <td>Target Vehicle Velocity</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-warning"></i></td>
+                                       <td>Priority Braking</td>
+                                       <td>False</td>
+                                       <td>Boolean</td>
+                                       <td>Engage brakes even if sig. air remains</td>
+                                    </tr>
+                                    <tr>
+                                       <td><i class="fa fa-circle text-warning"></i></td>
+                                       <td>Fixed Buffer Zone</td>
+                                       <td>0</td>
+                                       <td>Meters</td>
+                                       <td>Buffer Zone at end of track</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <div class="footer">
+                                 <div class="legend">
+                                    <i class="fa fa-circle text-success"></i>&nbsp;Config Ok&nbsp;<i class="fa fa-circle text-warning"></i>&nbsp;Config Warning&nbsp;<i class="fa fa-circle text-danger"></i>&nbsp;Config Error
+                                 </div>
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-times text-danger"></i> Flight Profile Error &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="card ">
+                           <div class="header">
+                              <h4 class="title">Events</h4>
+                              <p class="category">Status Alerts, State Transitions, Faults and Errors</p>
+                           </div>
+                           <div class="content">
+                              <div class="table-full-width">
+                                 <table class="table">
+                                    <tbody>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Sounding onboard alarm. Tone Sequence 3 - 'Overpressure'.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-warning">
+                                          <td><i class="fa fa-warning text-warning"></i></td>
+                                          <td>Sensor 'hp_psi_0' passed high watermark: 1500psi.</td>
+                                          <td class="td-actions text-right">
+                                             3 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Vent Valve Reports: Open.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-danger">
+                                          <td><i class="fa fa-exclamation text-danger"></i></td>
+                                          <td>Post UI Status Alert: `.danger` Cease Filling Immediately. Fill Valve State: <code>Error</code>.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-danger">
+                                          <td><i class="fa fa-exclamation text-danger"></i></td>
+                                          <td>Sounding onboard alarm. Tone sequence 0 - 'General Alarm'.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>State Transition: Fill -> Emergency.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-danger">
+                                          <td><i class="fa fa-exclamation text-danger"></i></td>
+                                          <td>Fill Valve Failed to close. Declaring Emergency.</td>
+                                          <td class="td-actions text-right">
+                                             55 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-warning">
+                                          <td><i class="fa fa-warning text-warning"></i></td>
+                                          <td>Fill Valve stuck, Attempt 2 of 2.</td>
+                                          <td class="td-actions text-right">
+                                             58 seconds ago
+                                          </td>
+                                       </tr>
+                                       <tr class="bg-warning">
+                                          <td><i class="fa fa-warning text-warning"></i></td>
+                                          <td>Sustained positive fill rate, did valve close?.</td>
+                                          <td class="td-actions text-right">
+                                             1 minute ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Target Pressure Reached.  Fill Valve Closing.</td>
+                                          <td class="td-actions text-right">
+                                             1 minute ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Positive Fill Rate.</td>
+                                          <td class="td-actions text-right">
+                                             3 minutes ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Fill valve reports open.</td>
+                                          <td class="td-actions text-right">
+                                             3 minutes ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>State Transition: Boot -> Fill.</td>
+                                          <td class="td-actions text-right">
+                                             3 minutes ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Remote command request to Fill - Accepted.</td>
+                                          <td class="td-actions text-right">
+                                             3 minutes ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Flight Profile Update: <code>enforce-valid-profile</code>: <code>True</code> &rarr; <code>False</code></td>
+                                          <td class="td-actions text-right">
+                                             5 minutes ago
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td><i class="fa fa-info text-info"></i></td>
+                                          <td>Remote command request to Fill - Declined: <code>Flight Profile Error</code>.</td>
+                                          <td class="td-actions text-right">
+                                             5 minutes ago
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="footer">
+                                 <hr>
+                                 <div class="stats">
+                                    <i class="fa fa-history"></i> Updated 1 second ago
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <footer class="footer">
+               <div class="container-fluid">
+                  <!-- <nav class="pull-left">
+                     <ul>
+                         <li>
+                             <a href="#">
+                                 Home
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 Company
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                 Portfolio
+                             </a>
+                         </li>
+                         <li>
+                             <a href="#">
+                                Blog
+                             </a>
+                         </li>
+                     </ul>
+                     </nav> -->
+                  <p class="copyright pull-right">
+                     &copy; 2017 <a href="https://paradigmhyperloop.com">Paradigm Hyperloop</a> &bull; Base Theme © 2017 <a href="http://www.creative-tim.com">Creative Tim</a>
+                  </p>
+               </div>
+            </footer>
+         </div>
+      </div>
+      <!--   Core JS Files   -->
+      <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+      <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+      <!--  Charts Plugin -->
+      <script src="assets/js/chartist.min.js"></script>
+      <!--  Notifications Plugin    -->
+      <script src="assets/js/bootstrap-notify.js"></script>
+      <!--  Google Maps Plugin    -->
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+      <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+      <script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+      <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+      <script src="assets/js/demo.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+
+            	demo.initChartist();
+
+            	// $.notify({
+              //   	icon: 'pe-7s-gift',
+              //   	message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+              //
+              //   },{
+              //       type: 'info',
+              //       timer: 4000
+              //   });
+
+         });
+      </script>
+   </body>
 </html>
