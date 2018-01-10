@@ -53,7 +53,7 @@ def inject_now():
             'navigation_bar': NAV_BAR}
 
 
-@app.route("/ui/", defaults={'path': 'index'})
+@app.route("/ui/", defaults={'path': 'index.html'})
 @app.route("/ui/<path:path>")
 def ui(path):
     page = path.split('.')[0]
