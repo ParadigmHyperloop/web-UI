@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-{% set active_page = "manual" %}
+{% set active_page = "profile" %}
+
 
 {% block content %}
 
 <div class="row">
    <div class="col-md-12">
-      <h1 class="text-center">Manual Control</h1>
+      {% include '_cards/profile.html' %}
    </div>
 </div>
 

@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
+<div class="sidebar" data-color="blue" data-image="{{ url_for('static', filename='./assets/img/sidebar-5.jpg') }}">
    <!--
       Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
       Tip 2: you can also add an image using data-image tag
@@ -6,118 +6,21 @@
       -->
    <div class="sidebar-wrapper">
       <div class="logo">
-         <a href="https://paradigmhyperloop.com" class="simple-text"><img src="./assets/img/paradigm-hz-white.png" width="100%"/></a>
+         <a href="https://paradigmhyperloop.com" class="simple-text"><img src="{{ url_for('static', filename='./assets/img/paradigm-hz-white.png') }}" width="100%"/></a>
       </div>
-      <!-- <ul class="nav nav-mobile-menu">
-         <ul class="nav navbar-nav navbar-left">
-            <li>
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-dashboard"></i>
-                  <p class="hidden-lg hidden-md">Dashboard</p>
-               </a>
-            </li>
-            <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-globe"></i>
-                  <b class="caret hidden-lg hidden-md"></b>
-                  <p class="hidden-lg hidden-md">
-                     5 Notifications
-                     <b class="caret"></b>
-                  </p>
-               </a>
-               <ul class="dropdown-menu">
-                  <li><a href="#">Notification 1</a></li>
-                  <li><a href="#">Notification 2</a></li>
-                  <li><a href="#">Notification 3</a></li>
-                  <li><a href="#">Notification 4</a></li>
-                  <li><a href="#">Another notification</a></li>
-               </ul>
-            </li>
-            <li>
-               <a href="">
-                  <i class="fa fa-search"></i>
-                  <p class="hidden-lg hidden-md">Search</p>
-               </a>
-            </li>
-         </ul>
-         <ul class="nav navbar-nav navbar-right">
-            <li>
-               <a href="">
-                  <p>Account</p>
-               </a>
-            </li>
-            <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <p>
-                     Dropdown
-                     <b class="caret"></b>
-                  </p>
-               </a>
-               <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-               </ul>
-            </li>
-            <li>
-               <a href="#">
-                  <p>Log out</p>
-               </a>
-            </li>
-            <li class="separator hidden-lg"></li>
-         </ul>
-      </ul> -->
+
       <ul class="nav">
-         <li class="active">
-            <a href="index.html">
-               <i class="pe-7s-graph"></i>
-               <p>Vehicle Dashboard</p>
-            </a>
-         </li>
-         <li>
-            <a href="profile.html">
-               <i class="pe-7s-user"></i>
-               <p>Flight Profile</p>
-            </a>
-         </li>
-         <li>
-            <a href="overrides.html">
-               <i class="pe-7s-note2"></i>
-               <p>Sensor Overrides</p>
-            </a>
-         </li>
-         <li>
-            <a href="manual.html">
-               <i class="pe-7s-news-paper"></i>
-               <p>Manual Control</p>
-            </a>
-         </li>
-         <li>
-            <a href="feeds.html">
-               <i class="pe-7s-science"></i>
-               <p>Live Streams</p>
-            </a>
-         </li>
-         <li>
-            <a href="health.html">
-               <i class="pe-7s-map-marker"></i>
-               <p>Service Health</p>
-            </a>
-         </li>
-         <li>
-            <a href="notifications.html">
-               <i class="pe-7s-bell"></i>
-               <p>Notifications</p>
-            </a>
-         </li>
-         <li class="active-pro" style="
-            /* background-color: red */">
-            <a href="upgrade.html" style="
-               background-color: rgba(255, 0, 0, 0.72);">
+        {% for id, data in navigation_bar.items() %}
+            <li{% if id == active_page %} class="active"{% endif
+            %}>
+              <a href="{{ data.href|e }}">
+                <i class="{{ data.icon|e }}"></i>
+                <p>{{ data.title|e }}</p>
+              </a>
+            </li>
+        {% endfor %}
+         <li class="active-pro">
+            <a href="upgrade.html" style="background-color: rgba(255, 0, 0, 0.72);">
                <i class="pe-7s-rocket"></i>
                <p>Launch Sequence</p>
             </a>
