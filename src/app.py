@@ -14,6 +14,11 @@ NAV_BAR = {
     'title': 'Vehicle Dashboard',
     'icon': 'pe-7s-graph'
   },
+  'pid': {
+    'href': 'pid.html',
+    'title': 'Air Supply',
+    'icon': 'pe-7s-share'
+  },
   'profile': {
     'href': 'profile.html',
     'title': 'Flight Profile',
@@ -32,7 +37,7 @@ NAV_BAR = {
   'feeds': {
     'href': 'feeds.html',
     'title': 'Live Streams',
-    'icon': 'pe-7s-science'
+    'icon': 'pe-7s-video'
   },
   'health': {
     'href': 'health.html',
