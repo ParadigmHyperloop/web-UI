@@ -5,51 +5,65 @@ from flask import Flask, g, jsonify, current_app, request, \
                   send_from_directory, render_template, redirect, abort
 
 
+DEFAULT_TITLE = "Control Interface"
+
+
 app = Flask(__name__)
 
 
-NAV_BAR = {
-  'index': {
+NAV_BAR = [
+  {
+    'id': 'index',
     'href': 'index.html',
     'title': 'Vehicle Dashboard',
     'icon': 'pe-7s-graph'
   },
-  'pid': {
+  {
+    'id': 'pid',
     'href': 'pid.html',
     'title': 'Air Supply',
     'icon': 'pe-7s-share'
   },
-  'profile': {
+  {
+    'id': 'profile',
     'href': 'profile.html',
     'title': 'Flight Profile',
     'icon': 'pe-7s-user'
   },
-  'overrides': {
+  {
+    'id': 'overrides',
     'href': 'overrides.html',
     'title': 'Sensor Overrides',
     'icon': 'pe-7s-note2'
   },
-  'manual': {
+  {
+    'id': 'manual',
     'href': 'manual.html',
     'title': 'Manual Control',
     'icon': 'pe-7s-news-paper'
   },
-  'feeds': {
+  {
+    'id': 'feeds',
     'href': 'feeds.html',
     'title': 'Live Streams',
     'icon': 'pe-7s-video'
   },
-  'health': {
+  {
+    'id': 'health',
     'href': 'health.html',
     'title': 'Vehicle Health',
     'icon': 'pe-7s-map-marker'
   },
-  'notifications': {
+  {
+    'id': 'notifications',
     'href': 'notifications.html',
     'title': 'Notifications',
     'icon': 'pe-7s-bell'
-  },
-}
+  }
+]
+
+
+NAV_IDS = [x['id'] for x in NAV_BAR]
 
 
 @app.context_processor
@@ -62,9 +76,13 @@ def inject_now():
 @app.route("/ui/<path:path>")
 def ui(path):
     page = path.split('.')[0]
+    if page in NAV_IDS:
+        title = NAV_BAR[NAV_IDS.index(page)]['title']
+    else:
+        title = DEFAULT_TITLE
     return render_template(path,
                            active_page=page,
-                           title=NAV_BAR[page]['title'])
+                           title=title)
 
 
 @app.errorhandler(404)

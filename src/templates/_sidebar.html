@@ -10,8 +10,8 @@
       </div>
 
       <ul class="nav">
-        {% for id, data in navigation_bar.items() %}
-            <li{% if id == active_page %} class="active"{% endif
+        {% for data in navigation_bar %}
+            <li{% if data.id == active_page %} class="active"{% endif
             %}>
               <a href="{{ data.href|e }}">
                 <i class="{{ data.icon|e }}"></i>
